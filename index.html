@@ -1,0 +1,16 @@
+<html>
+
+  <script>
+    function sendRequest() {
+      fetch('http://localhost:3003/method').then(res => {
+        return res.text();
+      }).then(textRes => {
+        window['request-result'].innerHTML = textRes;
+      });
+    }
+  </script>
+  <body>
+    <button onclick="sendRequest()">Send request</button>
+    <div id="request-result"></div>
+  </body>
+</html>
