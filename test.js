@@ -6,10 +6,10 @@ const puppeteer = require("puppeteer");
 
   await page.setCacheEnabled(false);
   // Uncomment this piece of code:
-  await page.setRequestInterception(true);
-  page.on("request", interceptedRequest => {
-    interceptedRequest.continue();
-  });
+  // await page.setRequestInterception(true);
+  // page.on("request", interceptedRequest => {
+  //   interceptedRequest.continue();
+  // });
 
   let responses = [];
   page.on("response", r => responses.push(r));
